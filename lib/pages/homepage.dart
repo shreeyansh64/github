@@ -18,6 +18,7 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(
             color: Color.fromARGB(255, 246, 247, 250),
             fontSize: 16.0,
+            fontWeight: FontWeight.w700
           ),
         ),
         actions: [
@@ -60,6 +61,7 @@ class _HomePageState extends State<HomePage> {
                           "My Work",
                           style: TextStyle(
                             color: Color.fromARGB(255, 246, 247, 250),
+                            fontWeight: FontWeight.w700
                           ),
                         ),
                         Icon(
@@ -70,19 +72,138 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 16.0),
+                    padding: const EdgeInsets.only(left: 16.0, top: 30.0),
                     child: Row(
-                            children: [
-                              Image.asset(
-                                'assets/icons/issues.png',
-                                width: 20,
-                                height: 20,
-                              ),
-                              SizedBox(width: 8),
-                              Text("Issues",style: TextStyle(color: Color.fromARGB(255,207, 209, 212)),)
-                            ],
+                      children: [
+                        Image.asset(
+                          'assets/icons/issues.png',
+                          width: 30,
+                          height: 30,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          "Issues",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 250, 252, 255),
                           ),
+                        ),
+                      ],
+                    ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, top: 25.0),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/icons/pull.png',
+                          width: 30,
+                          height: 30,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          "Pull Requests",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 250, 252, 255),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, top: 25.0),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/icons/discussions.png',
+                          width: 30,
+                          height: 30,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          "Discussions",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 250, 252, 255),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, top: 25.0),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/icons/projects.jpg',
+                          width: 30,
+                          height: 30,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          "Projects",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 250, 252, 255),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, top: 25.0),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/icons/repo.jpg',
+                          width: 30,
+                          height: 30,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          "Top Repositories",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 250, 252, 255),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, top: 25.0),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/icons/org.png',
+                          width: 30,
+                          height: 30,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          "Organizations",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 250, 252, 255),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, top: 25.0),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/icons/starred.webp',
+                          width: 30,
+                          height: 30,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          "Starred",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 250, 252, 255),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
@@ -112,3 +233,4 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
