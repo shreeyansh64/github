@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
           "Home",
           style: TextStyle(
             color: Color.fromARGB(255, 246, 247, 250),
-            fontSize: 16.0,
+            fontSize: 20.0,
             fontWeight: FontWeight.w700,
           ),
         ),
@@ -44,15 +44,16 @@ class _HomePageState extends State<HomePage> {
           children: [
             Container(
               color: Color.fromARGB(255, 23, 24, 28),
-              height: 450,
+              height: 500,
               width: double.infinity,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
                       left: 16.0,
                       right: 16.0,
-                      top: 8.0,
+                      top: 15.0,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,6 +62,7 @@ class _HomePageState extends State<HomePage> {
                           "My Work",
                           style: TextStyle(
                             color: Color.fromARGB(255, 246, 247, 250),
+                            fontSize: 16.0,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -85,6 +87,7 @@ class _HomePageState extends State<HomePage> {
                           "Issues",
                           style: TextStyle(
                             color: Color.fromARGB(255, 250, 252, 255),
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
@@ -104,6 +107,7 @@ class _HomePageState extends State<HomePage> {
                           "Pull Requests",
                           style: TextStyle(
                             color: Color.fromARGB(255, 250, 252, 255),
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
@@ -123,6 +127,7 @@ class _HomePageState extends State<HomePage> {
                           "Discussions",
                           style: TextStyle(
                             color: Color.fromARGB(255, 250, 252, 255),
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
@@ -142,6 +147,7 @@ class _HomePageState extends State<HomePage> {
                           "Projects",
                           style: TextStyle(
                             color: Color.fromARGB(255, 250, 252, 255),
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
@@ -161,6 +167,7 @@ class _HomePageState extends State<HomePage> {
                           "Top Repositories",
                           style: TextStyle(
                             color: Color.fromARGB(255, 250, 252, 255),
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
@@ -180,6 +187,7 @@ class _HomePageState extends State<HomePage> {
                           "Organizations",
                           style: TextStyle(
                             color: Color.fromARGB(255, 250, 252, 255),
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
@@ -199,6 +207,7 @@ class _HomePageState extends State<HomePage> {
                           "Starred",
                           style: TextStyle(
                             color: Color.fromARGB(255, 250, 252, 255),
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
@@ -243,7 +252,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 16.0, left: 16.0,top: 8.0),
+                    padding: const EdgeInsets.only(
+                      right: 16.0,
+                      left: 16.0,
+                      top: 8.0,
+                    ),
                     child: Container(
                       width: double.infinity,
                       child: OutlinedButton(
@@ -251,15 +264,17 @@ class _HomePageState extends State<HomePage> {
                           print("Add favorite clicked.");
                         },
                         style: OutlinedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255,33, 32, 36),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
+                          backgroundColor: Color.fromARGB(255, 33, 32, 36),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
                         ),
                         child: Text(
                           "ADD FAVORITES",
                           style: TextStyle(
                             color: Color.fromARGB(255, 138, 156, 181),
-                            fontFamily : 'monospace',
-                            fontSize: 11.0 
+                            fontFamily: 'monospace',
+                            fontSize: 11.0,
                           ),
                         ),
                       ),
@@ -275,8 +290,150 @@ class _HomePageState extends State<HomePage> {
             ),
             Container(
               color: Color.fromARGB(255, 23, 24, 28),
-              height: 300,
+              height: 400,
               width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 16.0,
+                      left: 16.0,
+                      bottom: 40.0,
+                    ),
+                    child: Text(
+                      "Shortcuts",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 246, 247, 250),
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                    child: Container(
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ClipOval(
+                                child: Image.asset(
+                                  'assets/icons/issues.png',
+                                  width: 20,
+                                  height: 20,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              ClipOval(
+                                child: Image.asset(
+                                  'assets/icons/pull.png',
+                                  width: 20,
+                                  height: 20,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              ClipOval(
+                                child: Image.asset(
+                                  'assets/icons/discussions.png',
+                                  width: 20,
+                                  height: 20,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              ClipOval(
+                                child: Image.asset(
+                                  'assets/icons/projects.jpg',
+                                  width: 20,
+                                  height: 20,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              ClipOval(
+                                child: Image.asset(
+                                  'assets/icons/repo.jpg',
+                                  width: 20,
+                                  height: 20,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              ClipOval(
+                                child: Image.asset(
+                                  'assets/icons/org.png',
+                                  width: 20,
+                                  height: 20,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 8.0,
+                              bottom: 8.0,
+                            ),
+                            child: Text(
+                              "The things you need, one tap away",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 240, 241, 245),
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            "Fast access your lists of Issues, Pull Requests, or Discussions",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 212, 214, 217),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              right: 16.0,
+                              left: 16.0,
+                              top: 8.0,
+                            ),
+                            child: Container(
+                              width: double.infinity,
+                              child: OutlinedButton(
+                                onPressed: () {
+                                  print("Get started clicked.");
+                                },
+                                style: OutlinedButton.styleFrom(
+                                  backgroundColor: Color.fromARGB(
+                                    255,
+                                    33,
+                                    32,
+                                    36,
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                                child: Text(
+                                  "GET STARTED",
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 138, 156, 181),
+                                    fontFamily: 'monospace',
+                                    fontSize: 11.0,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

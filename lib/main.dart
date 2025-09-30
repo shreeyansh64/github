@@ -46,7 +46,7 @@ class _MainPageState extends State<MainPage> {
       body: _pages[_currentIndex], 
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromARGB(255, 23, 24, 28),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
         currentIndex: _currentIndex,
