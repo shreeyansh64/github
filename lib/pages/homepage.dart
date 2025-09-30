@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(
             color: Color.fromARGB(255, 246, 247, 250),
             fontSize: 16.0,
-            fontWeight: FontWeight.w700
+            fontWeight: FontWeight.w700,
           ),
         ),
         actions: [
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                           "My Work",
                           style: TextStyle(
                             color: Color.fromARGB(255, 246, 247, 250),
-                            fontWeight: FontWeight.w700
+                            fontWeight: FontWeight.w700,
                           ),
                         ),
                         Icon(
@@ -203,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -216,6 +216,57 @@ class _HomePageState extends State<HomePage> {
               color: Color.fromARGB(255, 23, 24, 28),
               height: 200,
               width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 16.0,
+                      left: 16.0,
+                      bottom: 40.0,
+                    ),
+                    child: Text(
+                      "Favorites",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 246, 247, 250),
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                    child: Text(
+                      "Add favorite repositories for quick access at any time, without having to search",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 212, 214, 217),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 16.0, left: 16.0,top: 8.0),
+                    child: Container(
+                      width: double.infinity,
+                      child: OutlinedButton(
+                        onPressed: () {
+                          print("Add favorite clicked.");
+                        },
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255,33, 32, 36),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
+                        ),
+                        child: Text(
+                          "ADD FAVORITES",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 138, 156, 181),
+                            fontFamily : 'monospace',
+                            fontSize: 11.0 
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             Divider(
               thickness: 1,
@@ -233,4 +284,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
