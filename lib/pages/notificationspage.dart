@@ -127,11 +127,11 @@ class _NotificationsPageState extends State<NotificationsPage> {
                     Container(
                       width: 50,
                       height: 70,
-                        child: Image.asset(
-                          'assets/icons/merge.png',
-                          width: 25,
-                          height: 25,
-                        ),
+                      child: Image.asset(
+                        'assets/icons/merge.png',
+                        width: 25,
+                        height: 25,
+                      ),
                     ),
                     Container(
                       width: 350,
@@ -139,14 +139,37 @@ class _NotificationsPageState extends State<NotificationsPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "shreeyansh64 / js-animation #2",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 134, 135, 143),
+                                ),
+                              ),
+                              Text(
+                                "11d",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 134, 135, 143),
+                                ),
+                              ),
+                            ],
+                          ),
                           Text(
-                            "shreeyansh64 / js-animation #2",
+                            "Created canvas and centered",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 240, 241, 245),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text(
+                            "[vc]#adg873+g39q876gdi+6g32876g98sujhdjksh",
                             style: TextStyle(
                               color: Color.fromARGB(255, 134, 135, 143),
                             ),
                           ),
-                          Text("Created canvas and centered",style: TextStyle(color: Color.fromARGB(255,240, 241, 245),fontSize: 16,fontWeight: FontWeight.w500)),
-                          Text("[vc]#adg873+g39q876gdi+6g32876g98sujhdjksh",style: TextStyle(color: Color.fromARGB(255, 134, 135, 143)),),
                         ],
                       ),
                     ),
