@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.add, color: Color.fromARGB(255, 142, 175, 222)),
+            icon: Icon(Icons.add_circle_outline_sharp, color: Color.fromARGB(255, 142, 175, 222)),
           ),
           IconButton(
             onPressed: () {},
