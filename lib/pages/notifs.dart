@@ -1,8 +1,4 @@
 
-void main(){
-  print(notifs[0]);
-}
-
 final List notifs = [
   {
     "username": "shreeyansh64",

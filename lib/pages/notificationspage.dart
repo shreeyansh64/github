@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:github_clone/pages/notifs.dart';
 
 class NotificationsPage extends StatefulWidget {
   const NotificationsPage({super.key});
@@ -122,56 +121,36 @@ class _NotificationsPageState extends State<NotificationsPage> {
               padding: const EdgeInsets.only(top: 16.0, left: 16.0),
               child: Container(
                 width: double.infinity,
-                child: ListView.separated(
-                  itemBuilder: (context, index) {
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: 50,
-                          height: 70,
-                          child: Image.asset(
-                            '${notifs[index].pic}',
-                            width: 25,
-                            height: 25,
-                          ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 50,
+                      height: 70,
+                        child: Image.asset(
+                          'assets/icons/merge.png',
+                          width: 25,
+                          height: 25,
                         ),
-                        Container(
-                          width: 350,
-                          height: 70,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "${notifs[index].username} / ${notifs[index].repo} #${notifs[index].num}",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 134, 135, 143),
-                                ),
-                              ),
-                              Text(
-                                "${notifs[index].commit}",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 240, 241, 245),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              Text(
-                                "${notifs[index].link}",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 134, 135, 143),
-                                ),
-                              ),
-                            ],
+                    ),
+                    Container(
+                      width: 350,
+                      height: 70,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "shreeyansh64 / js-animation #2",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 134, 135, 143),
+                            ),
                           ),
-                        ),
-                      ],
-                    );
-                  },
-                  separatorBuilder: (context, index) {
-                    return Divider(height: 4, thickness: 2);
-                  },
-                  itemCount: notifs.length,
+                          Text("Created canvas and centered",style: TextStyle(color: Color.fromARGB(255,240, 241, 245),fontSize: 16,fontWeight: FontWeight.w500)),
+                          Text("[vc]#adg873+g39q876gdi+6g32876g98sujhdjksh",style: TextStyle(color: Color.fromARGB(255, 134, 135, 143)),),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
