@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_clone/pages/notifs.dart';
 
 class NotificationsPage extends StatefulWidget {
   const NotificationsPage({super.key});
@@ -29,83 +30,148 @@ class _NotificationsPageState extends State<NotificationsPage> {
       body: Container(
         width: double.infinity,
         color: Color.fromARGB(255, 23, 24, 28),
-        child: Row(
+        child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 3.0),
-              child: OutlinedButton(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 48, 48, 56),
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0, right: 3.0),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 48, 48, 56),
+                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    ),
+                    child: Row(
+                      children: [
+                        Text(
+                          "Inbox",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 242, 243, 247),
+                          ),
+                        ),
+                        SizedBox(width: 5),
+                        Icon(
+                          Icons.arrow_drop_down,
+                          color: Color.fromARGB(255, 242, 243, 247),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                child: Row(
-                  children: [
-                    Text(
-                      "Inbox",
+                Padding(
+                  padding: const EdgeInsets.only(right: 3.0, left: 3.0),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 48, 48, 56),
+                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    ),
+                    child: Text(
+                      "Focused",
                       style: TextStyle(
                         color: Color.fromARGB(255, 242, 243, 247),
                       ),
                     ),
-                    SizedBox(width: 5),
-                    Icon(
-                      Icons.arrow_drop_down,
-                      color: Color.fromARGB(255, 242, 243, 247),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 3.0, left: 3.0),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 48, 48, 56),
+                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 3.0, left: 3.0),
-              child: OutlinedButton(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 48, 48, 56),
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                ),
-                child: Text(
-                  "Focused",
-                  style: TextStyle(color: Color.fromARGB(255, 242, 243, 247)),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 3.0, left: 3.0),
-              child: OutlinedButton(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 48, 48, 56),
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                ),
-                child: Text(
-                  "Unread",
-                  style: TextStyle(color: Color.fromARGB(255, 242, 243, 247)),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 3.0),
-              child: OutlinedButton(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 48, 48, 56),
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                ),
-                child: Row(
-                  children: [
-                    Text(
-                      "Repository",
+                    child: Text(
+                      "Unread",
                       style: TextStyle(
                         color: Color.fromARGB(255, 242, 243, 247),
                       ),
                     ),
-                    SizedBox(width: 5),
-                    Icon(
-                      Icons.arrow_drop_down,
-                      color: Color.fromARGB(255, 242, 243, 247),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 3.0),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 48, 48, 56),
+                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     ),
-                  ],
+                    child: Row(
+                      children: [
+                        Text(
+                          "Repository",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 242, 243, 247),
+                          ),
+                        ),
+                        SizedBox(width: 5),
+                        Icon(
+                          Icons.arrow_drop_down,
+                          color: Color.fromARGB(255, 242, 243, 247),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16.0, left: 16.0),
+              child: Container(
+                width: double.infinity,
+                child: ListView.separated(
+                  itemBuilder: (context, index) {
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 50,
+                          height: 70,
+                          child: Image.asset(
+                            '${notifs[index].pic}',
+                            width: 25,
+                            height: 25,
+                          ),
+                        ),
+                        Container(
+                          width: 350,
+                          height: 70,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "${notifs[index].username} / ${notifs[index].repo} #${notifs[index].num}",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 134, 135, 143),
+                                ),
+                              ),
+                              Text(
+                                "${notifs[index].commit}",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 240, 241, 245),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              Text(
+                                "${notifs[index].link}",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 134, 135, 143),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                  separatorBuilder: (context, index) {
+                    return Divider(height: 4, thickness: 2);
+                  },
+                  itemCount: notifs.length,
                 ),
               ),
             ),
