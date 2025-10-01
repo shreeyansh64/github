@@ -23,7 +23,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
           ),
         ),
         actions: [
-          Icon(Icons.more_vert, color: Color.fromARGB(255, 142, 175, 222)),
+         IconButton(onPressed: (){}, icon:  Icon(Icons.more_vert, color: Color.fromARGB(255, 142, 175, 222)),)
         ],
       ),
       body: Container(

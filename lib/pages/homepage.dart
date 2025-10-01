@@ -29,7 +29,10 @@ class _HomePageState extends State<HomePage> {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.add_circle_outline_sharp, color: Color.fromARGB(255, 142, 175, 222)),
+            icon: Icon(
+              Icons.add_circle_outline_sharp,
+              color: Color.fromARGB(255, 142, 175, 222),
+            ),
           ),
           IconButton(
             onPressed: () {},
@@ -269,6 +272,15 @@ class _HomePageState extends State<HomePage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
+                          side: BorderSide(
+                            color: Color.fromARGB(
+                              255,
+                              138,
+                              156,
+                              181,
+                            ).withAlpha(77),
+                            width: 1.0,
+                          ),
                         ),
                         child: Text(
                           "ADD FAVORITES",
@@ -416,6 +428,15 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  side: BorderSide(
+                                    color: Color.fromARGB(
+                                      255,
+                                      138,
+                                      156,
+                                      181,
+                                    ).withAlpha(77),
+                                    width: 1.0,
                                   ),
                                 ),
                                 child: Text(
