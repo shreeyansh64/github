@@ -43,4 +43,6 @@ jobs:
       - name: Analyze project source
         run: flutter analyze --fatal-warnings
         # --fatal-warnings stops execution if any warnings are found
-
+      # Create android apk
+      - name: Build apk
+        run: flutter build apk
