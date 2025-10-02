@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        splashFactory: NoSplash.splashFactory,
       ),
       home: MainPage(),
     );
@@ -46,6 +47,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color.fromARGB(255, 23, 24, 28),
         selectedItemColor: Colors.white,

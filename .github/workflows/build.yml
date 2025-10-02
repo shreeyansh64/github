@@ -4,28 +4,22 @@ name: Flutter
 on:
   # Runs this action when you push on master
   push:
-    branches: [ "master","main" ]
+    branches: [ "master" ,"main"]
   # Runs this when a PR against master is created
   pull_request:
-    branches: [ "master" ,"main"]
+    branches: [ "master","main" ]
 
 jobs:
   flutter_job:
 
     # The machine, we can also use windows-latest or ubuntu-latest
     # We are choosing macos-latest because we will be also building for iOS
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
 
       # Clones the project on the machine
       - uses: actions/checkout@v4
-
-      # Sets up java 11
-      - uses: actions/setup-java@v4
-        with:
-          distribution: 'zulu'
-          java-version: '11'
 
       # Installs flutter and related dependency on this machine
       - name: Setup Flutter
@@ -38,19 +32,12 @@ jobs:
       # Fetches proj dependencies from pub
       - name: Install dependencies
         run: flutter pub get
-        # ^ If you want to use a specific version of flutter
-      
-      # Verifies if the dart code is formatted well
+          # ^ If you want to use a specific version of flutter
       - name: Verify formatting
         run: dart format --output=none --set-exit-if-changed .
-        # --set-exit-if-changed stops execution if the any code is not well formatted
-        # --output=none prints files which needs to be formatted
-      
-      # Checks for Symantic errors. Can be configured using analysis_options.yaml
+
       - name: Analyze project source
         run: flutter analyze --fatal-warnings
-        # optionally use --fatal-warnings to stop execution if any warnings are found
 
-      # Create android apk
-      - name: Build apk
-        run: flutter build apk
+      - name: Analyze project source
+        run: flutter analyze --fatal-warnings
