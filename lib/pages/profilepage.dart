@@ -92,7 +92,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: OutlinedButton(
                     onPressed: () {},
                     style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255,43, 44, 48),
+                      backgroundColor: Color.fromARGB(255, 43, 44, 48),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadiusGeometry.circular(8),
                       ),
@@ -121,7 +121,10 @@ class _ProfilePageState extends State<ProfilePage> {
                             ],
                           ),
                         ),
-                        Icon(Icons.edit,color: Color.fromARGB(255, 188, 189, 194),)
+                        Icon(
+                          Icons.edit,
+                          color: Color.fromARGB(255, 188, 189, 194),
+                        ),
                       ],
                     ),
                   ),

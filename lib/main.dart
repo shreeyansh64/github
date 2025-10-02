@@ -4,7 +4,6 @@ import 'package:github_clone/pages/homepage.dart';
 import 'package:github_clone/pages/notificationspage.dart';
 import 'package:github_clone/pages/profilepage.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -24,7 +23,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class MainPage extends StatefulWidget {
   @override
   _MainPageState createState() => _MainPageState();
@@ -43,7 +41,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_currentIndex], 
+      body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color.fromARGB(255, 23, 24, 28),
@@ -57,8 +55,14 @@ class _MainPageState extends State<MainPage> {
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications_outlined), label: "Notifs"),
-          BottomNavigationBarItem(icon: Icon(Icons.travel_explore), label: "Explore"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications_outlined),
+            label: "Notifs",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.travel_explore),
+            label: "Explore",
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
       ),
