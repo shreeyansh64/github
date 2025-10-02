@@ -261,12 +261,10 @@ class _HomePageState extends State<HomePage> {
                       left: 16.0,
                       top: 8.0,
                     ),
-                    child: Container(
+                    child: SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () {
-                          print("Add favorite clicked.");
-                        },
+                        onPressed: () {},
                         style: OutlinedButton.styleFrom(
                           backgroundColor: Color.fromARGB(255, 33, 32, 36),
                           shape: RoundedRectangleBorder(
@@ -324,7 +322,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-                    child: Container(
+                    child: SizedBox(
                       width: double.infinity,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -413,12 +411,10 @@ class _HomePageState extends State<HomePage> {
                               left: 16.0,
                               top: 8.0,
                             ),
-                            child: Container(
+                            child: SizedBox(
                               width: double.infinity,
                               child: OutlinedButton(
-                                onPressed: () {
-                                  print("Get started clicked.");
-                                },
+                                onPressed: () {},
                                 style: OutlinedButton.styleFrom(
                                   backgroundColor: Color.fromARGB(
                                     255,

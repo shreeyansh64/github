@@ -46,18 +46,16 @@ class _ProfilePageState extends State<ProfilePage> {
                   padding: const EdgeInsets.only(top: 16, left: 16),
                   child: Row(
                     children: [
-                      Container(
-                        child: ClipOval(
-                          child: Image.asset(
-                            'assets/icons/profile.jpg',
-                            height: 70,
-                            width: 70,
-                            fit: BoxFit.cover,
-                          ),
+                      ClipOval(
+                        child: Image.asset(
+                          'assets/icons/profile.jpg',
+                          height: 70,
+                          width: 70,
+                          fit: BoxFit.cover,
                         ),
                       ),
                       SizedBox(width: 10.0),
-                      Container(
+                      SizedBox(
                         width: 300,
 
                         child: Column(
@@ -104,23 +102,22 @@ class _ProfilePageState extends State<ProfilePage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          child: Row(
-                            children: [
-                              Icon(
-                                Icons.emoji_emotions_outlined,
-                                color: Color.fromARGB(255, 188, 189, 194),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.emoji_emotions_outlined,
+                              color: Color.fromARGB(255, 188, 189, 194),
+                            ),
+                            SizedBox(width: 10),
+                            Text(
+                              "Set you status",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 195, 196, 201),
                               ),
-                              SizedBox(width: 10),
-                              Text(
-                                "Set you status",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 195, 196, 201),
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
+
                         Icon(
                           Icons.edit,
                           color: Color.fromARGB(255, 188, 189, 194),

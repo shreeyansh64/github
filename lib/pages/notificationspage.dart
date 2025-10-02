@@ -125,12 +125,12 @@ class _NotificationsPageState extends State<NotificationsPage> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16.0, left: 16.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 50,
                       height: 70,
                       child: Image.asset(
@@ -139,7 +139,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                         height: 25,
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 350,
                       height: 70,
                       child: Column(
