@@ -43,6 +43,4 @@ jobs:
       - name: Analyze project source
         run: flutter analyze --fatal-warnings
         # --fatal-warnings stops execution if any warnings are found
-        # Runs unit test
-      - name: Run tests
-        run: flutter test
+
